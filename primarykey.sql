@@ -1,0 +1,24 @@
+#PRIMARY KEY = IT IS AN UNIQUE KEY THAT IS ASSIGED SO THAT ELEMENTS FROM TABLE CAN BE SERCHED , VIRWSED OR EDITED PROPERLY , HERE FOR EX WAS id
+
+#CONSTRAINS
+#NOT NULL - COLUMS CANT HAVE A NULL VALUE
+#UNIQUE - ALL VALUES IN COLOUM ARE DIFFERENT 
+
+create TABLE if not exists temp3 (
+id INT UNIQUE
+);
+INSERT INTO temp3  VALUES (101);
+INSERT INTO temp3 VALUES (102);
+
+#HOW TO MAKE ANY KEY A PRIMARY KEY -
+create table temp4 (
+id int,
+name varchar(50),
+city varchar(50),
+primary key (id)
+);
+#HOW TO MAKE ANY KEY A FOREIGN KEY -
+create table temp5(
+id int,
+foreign key (id) references temp4(id)
+);
